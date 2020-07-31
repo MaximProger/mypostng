@@ -186,8 +186,8 @@ img {
   left: 0;
   z-index: 10;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &.fixed {
     position: fixed;
@@ -201,6 +201,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav__link {
@@ -249,6 +250,16 @@ img {
     &:hover {
       opacity: 0.7;
     }
+  }
+}
+
+.header__close {
+  display: none;
+  font-size: 42px;
+  color: #fff;
+
+  &.active {
+    display: block;
   }
 }
 
@@ -509,6 +520,55 @@ img {
   .md {
     display: inline-block;
   }
+
+  .nav {
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    background: $gradient;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .header__burger {
+    display: none;
+    font-size: 42px;
+    color: #fff;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .nav__link {
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .header__right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .header__btn {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .intro {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: $mobile) {
@@ -518,6 +578,104 @@ img {
 
   .xs {
     display: inline-block;
+  }
+
+  .intro {
+    padding-top: 130px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .intro__content {
+    width: 100%;
+    max-width: 100%;
+    flex: auto;
+  }
+
+  .intro__subtitle {
+    font-size: 16px;
+  }
+
+  .planning {
+    padding: 40px 0;
+  }
+
+  .planning__inner {
+    flex-wrap: wrap;
+  }
+
+  .planning__img {
+    width: 100%;
+  }
+
+  .planning__content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .advantages {
+    padding-top: 40px;
+  }
+
+  .advantages__inner {
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    i {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .analytics {
+    padding: 40px 0;
+  }
+
+  .analytics__inner {
+    flex-wrap: wrap;
+  }
+
+  .analytics__content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .analytics__img {
+    width: 100%;
+  }
+
+  .tarifs {
+    padding: 40px 0;
+  }
+
+  .tarifs__inner {
+    flex-wrap: wrap;
+  }
+
+  .tarifs__item {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+  }
+
+  .footer__link {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

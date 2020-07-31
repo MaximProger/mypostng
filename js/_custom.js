@@ -38,4 +38,19 @@ $(document).ready(function () {
       500
     );
   });
+
+  // Burger Menu
+  // Open
+  $(".header__burger").on("click", function () {
+    $(this).removeClass("active");
+    $(".header__close").addClass("active");
+    $("#nav").addClass("active");
+  });
+
+  // Close
+  $(".header__close").on("click", function () {
+    $(this).removeClass("active");
+    $(".header__burger").addClass("active");
+    $("#nav").removeClass("active");
+  });
 });
