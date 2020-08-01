@@ -240,6 +240,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  &--special {
+    display: none;
+  }
 }
 
 .header__logo {
@@ -257,6 +261,7 @@ img {
   display: none;
   font-size: 42px;
   color: #fff;
+  z-index: 11;
 
   &.active {
     display: block;
@@ -412,6 +417,21 @@ img {
   font-size: 18px;
 }
 
+// FAQ
+.faq {
+  .advantages__item__title {
+    color: #266aa0;
+    font-size: 18px;
+  }
+}
+
+.faq__title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
 // Tarifs
 .tarifs {
   padding: 60px 0;
@@ -424,15 +444,37 @@ img {
 }
 
 .tarifs__item {
-  padding: 20px 0;
+  padding: 20px;
   width: 32%;
   height: 550px;
   text-align: center;
-  border: 1px solid $text;
   border-radius: 10px;
+  background: #f2f2f2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
   &:nth-child(2) {
     height: 600px;
+    background: $gradient;
+    color: #fff;
+
+    .tarifs__item__price {
+      color: $orange;
+    }
+
+    .tarifs__item__advantages__mark {
+      color: $orange;
+    }
+
+    .tarifs__item__advantages__item {
+      border-color: #fff;
+    }
+
+    .tarifs__item__btn {
+      &:hover {
+        border-color: $orange;
+        background: transparent;
+      }
+    }
   }
 }
 
@@ -521,20 +563,34 @@ img {
     display: inline-block;
   }
 
-  .nav {
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    background: $gradient;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  .header {
+    &.fixed {
+      position: absolute;
+      background: transparent;
+      box-shadow: none;
+    }
+  }
 
-    &.active {
-      display: flex;
+  .nav {
+    display: none;
+
+    &--special {
+      padding: 20px;
+      display: none;
+      background: $gradient;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      height: 375px;
+      left: 0;
+      z-index: 10;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+      &.active {
+        display: flex;
+      }
     }
   }
 
@@ -542,6 +598,7 @@ img {
     display: none;
     font-size: 42px;
     color: #fff;
+    z-index: 11;
 
     &.active {
       display: block;
@@ -552,6 +609,7 @@ img {
     margin-right: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 24px;
   }
 
   .header__right {
@@ -566,8 +624,30 @@ img {
 
   .intro {
     height: auto;
-    padding-top: 80px;
+    padding-top: 130px;
     padding-bottom: 60px;
+  }
+
+  .intro__content {
+    width: 100%;
+    max-width: 100%;
+    flex: auto;
+  }
+
+  .tarifs {
+    padding: 40px 0;
+  }
+
+  .tarifs__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .tarifs__item {
+    width: 100%;
+    margin-bottom: 25px;
+    max-width: 450px;
   }
 }
 
@@ -653,17 +733,10 @@ img {
     width: 100%;
   }
 
-  .tarifs {
-    padding: 40px 0;
-  }
-
-  .tarifs__inner {
-    flex-wrap: wrap;
-  }
-
-  .tarifs__item {
-    width: 100%;
-    margin-bottom: 25px;
+  .faq {
+    .advantages__item {
+      margin-bottom: 30px;
+    }
   }
 
   .footer__nav {

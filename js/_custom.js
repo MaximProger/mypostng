@@ -28,7 +28,7 @@ $(document).ready(function () {
       blockId = $this.data("scroll"),
       blockOffset = $(blockId).offset().top;
 
-    $("#nav a").removeClass("active");
+    $(".nav a").removeClass("active");
     $this.addClass("active");
 
     $("html, body").animate(
@@ -44,13 +44,13 @@ $(document).ready(function () {
   $(".header__burger").on("click", function () {
     $(this).removeClass("active");
     $(".header__close").addClass("active");
-    $("#nav").addClass("active");
+    $("#navSpecial").addClass("active");
   });
 
   // Close
   $(".header__close").on("click", function () {
     $(this).removeClass("active");
     $(".header__burger").addClass("active");
-    $("#nav").removeClass("active");
+    $("#navSpecial").removeClass("active");
   });
 });
