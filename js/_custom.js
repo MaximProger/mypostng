@@ -45,6 +45,7 @@ $(document).ready(function () {
     $(this).removeClass("active");
     $(".header__close").addClass("active");
     $("#navSpecial").addClass("active");
+    $(".header__logo").addClass("active");
   });
 
   // Close
@@ -52,5 +53,6 @@ $(document).ready(function () {
     $(this).removeClass("active");
     $(".header__burger").addClass("active");
     $("#navSpecial").removeClass("active");
+    $(".header__logo").removeClass("active");
   });
 });

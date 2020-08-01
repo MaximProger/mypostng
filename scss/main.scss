@@ -255,6 +255,10 @@ img {
       opacity: 0.7;
     }
   }
+
+  &.active {
+    opacity: 0;
+  }
 }
 
 .header__close {
